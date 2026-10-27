@@ -1,0 +1,99 @@
+{
+  "name": "wimgs",
+  "version": "0.1.0",
+  "description": "Pure TypeScript PNG, APNG, JPEG, and GIF codecs plus lossless optimize / lossy shrink for uploads. ES2022 ESM, no WASM, no native deps: Node, Deno, Bun, Cloudflare Workers, browsers.",
+  "keywords": [
+    "apng",
+    "codec",
+    "compression",
+    "decoder",
+    "deflate",
+    "encoder",
+    "esm",
+    "gif",
+    "image",
+    "jpeg",
+    "jpg",
+    "optimize",
+    "png",
+    "resize",
+    "shrink",
+    "tanstack-intent",
+    "typescript",
+    "zlib"
+  ],
+  "homepage": "https://github.com/danieljohnsxd/wimgs#readme",
+  "bugs": {
+    "url": "https://github.com/danieljohnsxd/wimgs/issues"
+  },
+  "license": "MIT",
+  "author": "Daniel Johns",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieljohnsxd/wimgs.git"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./png": {
+      "types": "./dist/png.d.ts",
+      "import": "./dist/png.js",
+      "default": "./dist/png.js"
+    },
+    "./jpeg": {
+      "types": "./dist/jpeg.d.ts",
+      "import": "./dist/jpeg.js",
+      "default": "./dist/jpeg.js"
+    },
+    "./gif": {
+      "types": "./dist/gif.d.ts",
+      "import": "./dist/gif.js",
+      "default": "./dist/gif.js"
+    },
+    "./resize": {
+      "types": "./dist/resize.d.ts",
+      "import": "./dist/resize.js",
+      "default": "./dist/resize.js"
+    }
+  },
+  "scripts": {
+    "bench": "pnpm run build && node --expose-gc scripts/bench.ts",
+    "bench:check": "pnpm run build && node scripts/bench_check.ts",
+    "build": "tsdown",
+    "check": "pnpm run fmt:check && pnpm run lint",
+    "check-types": "pnpm run lint",
+    "clean": "rm -rf dist",
+    "fmt": "oxfmt .",
+    "fmt:check": "oxfmt --check .",
+    "format": "pnpm run fmt",
+    "lint": "oxlint .",
+    "lint:fix": "oxlint --fix .",
+    "prepack": "pnpm run build",
+    "test": "pnpm run build && node scripts/run_test.ts",
+    "typecheck": "pnpm run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
+    "oxlint-tsgolint": "^7.0.2005",
+    "tsdown": "^0.23.2",
+    "typescript": "7.1.0-beta"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@12.0.0"
+}
