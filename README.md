@@ -1,9 +1,9 @@
-# wimgs
+# wimages
 
 Pure TypeScript image codecs and a photo-upload shrinker. PNG, APNG, JPEG, GIF; ES2022 ESM; typed arrays in and out. No Rust, no WASM, no canvas, no `node:*` — the same build runs in Node 22+, Deno, Bun, Cloudflare Workers, Convex actions, Web Workers, and evergreen browsers.
 
 ```ts
-import { shrinkImage } from "wimgs";
+import { shrinkImage } from "wimages";
 
 // Photo upload path: ≤ 2048 px long side, ≤ 1 MiB, upright, JPEG for photos / PNG for graphics.
 const { bytes, format, width, height } = shrinkImage(uploadBytes, {
@@ -48,7 +48,7 @@ WebP, AVIF and HEIC are not output formats here: there is no pure-JS encoder wor
 The codecs underneath are exported too:
 
 ```ts
-import { decodeImage, resize, encodeJpeg, encodePng, encodeGif, decodeGif } from "wimgs";
+import { decodeImage, resize, encodeJpeg, encodePng, encodeGif, decodeGif } from "wimages";
 
 const { image, format, animated } = decodeImage(bytes); // sniffs PNG / JPEG / GIF, applies EXIF orientation, first frame of animations
 const small = resize(image, { maxSide: 1024 }); // Lanczos3, premultiplied alpha, never upscales
@@ -121,15 +121,15 @@ Not supported, thrown immediately with a message that names the variant: arithme
 
 The root export tree-shakes (`sideEffects: false`), and there are explicit entry points for bundler-less use or when you want intent visible:
 
-| Import         | Contents                                                          |
-| -------------- | ----------------------------------------------------------------- |
-| `wimgs`        | everything, including `optimizeImage` / `shrinkImage`             |
-| `wimgs/png`    | `encodePng`, `decodePng`, `quantizeToPalette`, APNG, PNG metadata |
-| `wimgs/jpeg`   | `encodeJpeg`, `decodeJpeg`, `transcodeJpeg`, JPEG metadata        |
-| `wimgs/gif`    | `encodeGif`, `decodeGif`, `optimizeGif`, `quantizeToPalette`      |
-| `wimgs/resize` | `resize`, `fitSize`                                               |
+| Import           | Contents                                                          |
+| ---------------- | ----------------------------------------------------------------- |
+| `wimages`        | everything, including `optimizeImage` / `shrinkImage`             |
+| `wimages/png`    | `encodePng`, `decodePng`, `quantizeToPalette`, APNG, PNG metadata |
+| `wimages/jpeg`   | `encodeJpeg`, `decodeJpeg`, `transcodeJpeg`, JPEG metadata        |
+| `wimages/gif`    | `encodeGif`, `decodeGif`, `optimizeGif`, `quantizeToPalette`      |
+| `wimages/resize` | `resize`, `fitSize`                                               |
 
-Sizes of the full module graph each entry pulls in (minified / gzip): `wimgs` ~116 KB / 38 KB, `wimgs/png` 45 / 15, `wimgs/jpeg` 41 / 14 (no PNG inflater), `wimgs/gif` 22 / 8, `wimgs/resize` 7 / 2.5.
+Sizes of the full module graph each entry pulls in (minified / gzip): `wimages` ~116 KB / 38 KB, `wimages/png` 45 / 15, `wimages/jpeg` 41 / 14 (no PNG inflater), `wimages/gif` 22 / 8, `wimages/resize` 7 / 2.5.
 
 ## Scope and limits — read before adopting
 

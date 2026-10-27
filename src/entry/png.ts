@@ -1,4 +1,4 @@
-/** `wimgs/png` — PNG codec only. */
+/** `wimages/png` — PNG codec only. */
 export { createPixelBuffer, type PixelBuffer } from "../pixels.ts";
 export { DEFAULT_MAX_PIXELS, type DecodeLimits } from "../limits.ts";
 export { decodePng } from "../png/decode.ts";

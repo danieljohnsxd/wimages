@@ -1,4 +1,4 @@
-# Why wimgs behaves the way it does
+# Why wimages behaves the way it does
 
 Background for the `image-uploads` skill. Sources are the repo's own decision ledgers (`ledger-image.md`, `ledger-apng.md`, `ledger-gif.md`, `ledger-jpeg.md`, `ledger-png.md`, `ledger-review.md`) and the sources they name.
 

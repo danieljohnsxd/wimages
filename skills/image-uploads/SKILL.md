@@ -1,9 +1,9 @@
 ---
 name: image-uploads
-description: Shrink, optimize, or pick the format for user-uploaded images (JPEG, PNG, GIF, APNG) with the pure-TypeScript `wimgs` package — no native deps, runs in Workers, Convex, Deno, browsers. Load when handling image uploads, resizing photos to a byte/size budget, stripping EXIF/GPS, keeping GIFs animated, or deciding JPEG vs PNG vs GIF vs APNG.
+description: Shrink, optimize, or pick the format for user-uploaded images (JPEG, PNG, GIF, APNG) with the pure-TypeScript `wimages` package — no native deps, runs in Workers, Convex, Deno, browsers. Load when handling image uploads, resizing photos to a byte/size budget, stripping EXIF/GPS, keeping GIFs animated, or deciding JPEG vs PNG vs GIF vs APNG.
 ---
 
-# image-uploads (wimgs)
+# image-uploads (wimages)
 
 ## When to use / when not to
 
@@ -15,7 +15,7 @@ description: Shrink, optimize, or pick the format for user-uploaded images (JPEG
 ## Happy path
 
 ```ts
-import { shrinkImage, optimizeImage } from "wimgs";
+import { shrinkImage, optimizeImage } from "wimages";
 
 // Untrusted upload → ≤ 2048 px, ≤ 1 MiB, upright, EXIF/GPS gone, ICC kept, animation kept.
 const out = shrinkImage(bytes, { maxSide: 2048, maxBytes: 1 << 20, maxPixels: 16_000_000 });

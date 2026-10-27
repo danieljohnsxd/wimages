@@ -4,7 +4,7 @@ Decisions for the GIF codec. Date of this snapshot: 2026-08-27 (supersedes 2026-
 
 ## Product
 
-GIF is the meme / interchange animation format (see `ledger-apng.md`). wimgs ships GIF89a encode + GIF87a/GIF89a decode. Pixels in, bytes out. Same `PixelBuffer` as PNG.
+GIF is the meme / interchange animation format (see `ledger-apng.md`). wimages ships GIF89a encode + GIF87a/GIF89a decode. Pixels in, bytes out. Same `PixelBuffer` as PNG.
 
 - `encodeGif(image: PixelBuffer | readonly GifFrame[], options?): Uint8Array`
 - `decodeGif(bytes, options?: { maxPixels?: number }): { width, height, frames, delays, loop }`

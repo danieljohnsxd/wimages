@@ -1,5 +1,5 @@
 {
-  "name": "wimgs",
+  "name": "wimages",
   "version": "0.1.0",
   "description": "Pure TypeScript PNG, APNG, JPEG, and GIF codecs plus lossless optimize / lossy shrink for uploads. ES2022 ESM, no WASM, no native deps: Node, Deno, Bun, Cloudflare Workers, browsers.",
   "keywords": [
@@ -22,15 +22,15 @@
     "typescript",
     "zlib"
   ],
-  "homepage": "https://github.com/danieljohnsxd/wimgs#readme",
+  "homepage": "https://github.com/danieljohnsxd/wimages#readme",
   "bugs": {
-    "url": "https://github.com/danieljohnsxd/wimgs/issues"
+    "url": "https://github.com/danieljohnsxd/wimages/issues"
   },
   "license": "MIT",
   "author": "Daniel Johns",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danieljohnsxd/wimgs.git"
+    "url": "git+https://github.com/danieljohnsxd/wimages.git"
   },
   "files": [
     "dist",

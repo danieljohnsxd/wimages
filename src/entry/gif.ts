@@ -1,4 +1,4 @@
-/** `wimgs/gif` — GIF codec only. */
+/** `wimages/gif` — GIF codec only. */
 export { createPixelBuffer, type PixelBuffer } from "../pixels.ts";
 export { DEFAULT_MAX_PIXELS, type DecodeLimits } from "../limits.ts";
 export { decodeGif, type GifDecodeResult } from "../gif/decode.ts";

@@ -1,5 +1,5 @@
 /**
- * wimgs — pure TypeScript PNG / JPEG / GIF codecs and a photo-upload shrinker (ES2022 ESM).
+ * wimages — pure TypeScript PNG / JPEG / GIF codecs and a photo-upload shrinker (ES2022 ESM).
  *
  * Host-neutral: typed arrays only. No Node builtins, no canvas, no WASM.
  */

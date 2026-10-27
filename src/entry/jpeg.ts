@@ -1,4 +1,4 @@
-/** `wimgs/jpeg` — JPEG codec only. */
+/** `wimages/jpeg` — JPEG codec only. */
 export { createPixelBuffer, type PixelBuffer } from "../pixels.ts";
 export { DEFAULT_MAX_PIXELS, type DecodeLimits } from "../limits.ts";
 export { decodeJpeg, type JpegDecodeOptions } from "../jpeg/decode.ts";
